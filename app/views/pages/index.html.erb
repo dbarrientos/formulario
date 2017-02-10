@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<h1>Hola <%= @q %></h1>
+<p><%= @b %></p>
+
+<%= link_to "Ver Usuarios", pages_see_users_path  %>
+
+<form method="POST" action="<%= pages_save_user_path %>">
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	<input type="text" name="q">
+	<input type="submit" name="enviar" value="enviar">
+</form>
