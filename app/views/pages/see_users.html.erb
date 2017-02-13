@@ -4,12 +4,14 @@
 		<td>id</td>
 		<td>Nombre</td>
 		<td>Edad</td>
+		<td>Email</td>
 	</tr>
 	<% @users.each do |user| %>	
 		<tr>
 			<td><%= user.id %></td>
 			<td><%= user.name %></td>
 			<td><%= user.age != nil ? user.age : "" %></td>
+			<td><%= user.email != nil ? user.email : "" %></td>
 		</tr>
 	<% end %>
 </table>
